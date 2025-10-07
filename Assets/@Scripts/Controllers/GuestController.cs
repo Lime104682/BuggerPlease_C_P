@@ -33,8 +33,11 @@ public class GuestController : MonoBehaviour
 			UpdateAnimation();
 		}
 	}
+	
+	public bool IsServing => Tray.Visible;
 
-	private EGuestState _guestState = EGuestState.None;
+    //Guest Only
+    private EGuestState _guestState = EGuestState.None;
 	public EGuestState GuestState
 	{
 		get { return _guestState; }
@@ -45,10 +48,10 @@ public class GuestController : MonoBehaviour
 		}
 	}
 
-	public bool IsServing => Tray.Visible;
-
 	public int CurrentDestQueueIndex;
 
+
+	//목적지
 	public Vector3 Destination
 	{
 		get { return _navMeshAgent.destination; }
@@ -60,6 +63,7 @@ public class GuestController : MonoBehaviour
 		}
 	}
 
+	//목적지 도착 여부
 	public bool HasArrivedAtDestination
 	{
 		get
@@ -69,6 +73,7 @@ public class GuestController : MonoBehaviour
 		}
 	}
 
+	//주문 갯수 표시
 	public int OrderCount
 	{
 		set
@@ -87,8 +92,10 @@ public class GuestController : MonoBehaviour
 		_animator = GetComponent<Animator>();
 		_navMeshAgent = GetComponent<NavMeshAgent>();
 		_orderBubble = Utils.FindChild<UI_OrderBubble>(gameObject);
+
 		Tray = Utils.FindChild<TrayController>(gameObject);
 
+		//Guest Only
 		_navMeshAgent.speed = _moveSpeed;
 		_navMeshAgent.stoppingDistance = 0.05f;
 		_navMeshAgent.radius = 0.1f;

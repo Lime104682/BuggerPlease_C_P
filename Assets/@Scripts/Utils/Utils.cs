@@ -7,7 +7,8 @@ using static Define;
 
 public static class Utils
 {
-	public static T GetOrAddComponent<T>(GameObject go) where T : UnityEngine.Component
+	public static T GetOrAddComponent<T>(GameObject go) 
+		where T : UnityEngine.Component
 	{
 		T component = go.GetComponent<T>();
 		if (component == null)
@@ -25,7 +26,8 @@ public static class Utils
 		return transform.gameObject;
 	}
 
-	public static T FindChild<T>(GameObject go, string name = null, bool recursive = false) where T : UnityEngine.Object
+	public static T FindChild<T>(GameObject go, string name = null, bool recursive = false) 
+		where T : UnityEngine.Object
 	{
 		if (go == null)
 			return null;

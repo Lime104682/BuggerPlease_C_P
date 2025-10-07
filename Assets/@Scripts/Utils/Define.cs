@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class Define
 {
+	//플레이어 상태
 	public enum EState
 	{
 		None,
@@ -11,6 +12,7 @@ public static class Define
 		Move,
 	}
 
+	//트레이에 쌓은 오브젝트 종류
 	public enum ETrayObject
 	{
 		None,
@@ -18,6 +20,7 @@ public static class Define
 		Burger,
 	}
 
+	//손님 상태
 	public enum EGuestState
 	{
 		None,
@@ -27,6 +30,7 @@ public static class Define
 		Leaving,
 	}
 
+	//테이블 상태
 	public enum ETableState
 	{
 		None,
@@ -35,7 +39,7 @@ public static class Define
 		Dirty,
 	}
 
-	// TEMP
+	// TEMP, 차후 고칠 수 있는 수치 변수 모음
 	public const float GRILL_SPAWN_BURGER_INTERVAL = 0.5f;
 	public const int GRILL_MAX_BURGER_COUNT = 20;
 

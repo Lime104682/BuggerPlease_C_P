@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 	private Animator _animator;
 	private CharacterController _controller;
 	private AudioSource _audioSource;
+
 	public TrayController Tray { get; private set; }
 
 	private EState _state = EState.None;

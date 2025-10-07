@@ -8,19 +8,22 @@ using static Define;
 public class TrayController : MonoBehaviour
 {
 	[SerializeField]
+	//흔들림 정도
 	private Vector2 _shakeRange = new Vector2(0.8f, 0.4f);
 
 	[SerializeField]
+	//뒤로 휘는 정도
 	private float _bendFactor = 0.1f;
 
 	[SerializeField]
+	//각 물건의 높이 간격
 	private float _itemHeight = 0.5f;
 
-	private ETrayObject _trayObject = ETrayObject.None;
+    private ETrayObject _trayObject = ETrayObject.None;
 	public ETrayObject CurrentTrayObject
 	{
 		get { return _trayObject; }
-		set 
+		set  
 		{ 
 			_trayObject = value;
 			switch (value)
@@ -42,6 +45,7 @@ public class TrayController : MonoBehaviour
 	private HashSet<Transform> _reserved = new HashSet<Transform>();
 	private List<Transform> _items = new List<Transform>();
 
+	//트레이 ON/OFF
 	private MeshRenderer _meshRenderer;
 	private PlayerController _player;
 

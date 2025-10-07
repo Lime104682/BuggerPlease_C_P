@@ -17,6 +17,7 @@ public class Counter : MonoBehaviour
 	private BurgerPile _burgerPile;
 	private MoneyPile _moneyPile;
 	
+	//머니스폰수
 	int _spawnMoneyRemaining = 0;
 
 	// 주문하는 햄버거 수.
@@ -59,8 +60,8 @@ public class Counter : MonoBehaviour
 	private void Update()
 	{
 		// 손님 AI.
-		UpdateGuestQueueAI();
-		UpdateGuestOrderAI();
+		UpdateGuestQueueAI(); //줄서기 담당
+		UpdateGuestOrderAI(); //주문 담당
 	}
 
 	IEnumerator CoSpawnGuest()

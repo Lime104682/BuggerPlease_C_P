@@ -80,7 +80,7 @@ public class Table : MonoBehaviour
 
 	private void UpdateGuestAI()
 	{
-		if (IsOccupied == false)
+		if (IsOccupied == false) //아무도 없다.
 			return;
 
 		if (TableState == ETableState.Reserved)

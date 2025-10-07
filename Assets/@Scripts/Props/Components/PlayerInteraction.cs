@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
+
 public class PlayerInteraction : MonoBehaviour
 {
 	public Action<PlayerController> OnPlayerInteraction;
